@@ -1,0 +1,13 @@
+FROM node:20.5.1-slim
+
+RUN npm i -g @nestjs/cli
+
+USER node
+
+WORKDIR /home/node/app
+
+ENV NODE_ENV=test
+
+ENV TZ='-03:00'
+
+CMD [ "tail", "-f", "/dev/null" ]
